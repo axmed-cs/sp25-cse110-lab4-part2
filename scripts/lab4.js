@@ -30,7 +30,7 @@ function sumValues(num1, num2, add) {
  * @returns An array of each price's new price, after the discount is applied. Or false, if prices array is empty.
  */
 function discountPrices(prices, discount) {
-    if (prices.length < 1 || typeof prices != 'array') {
+    if (prices.length < 1 || !Array.isArray(prices)) {
         return false;
     }
     let discounted = []
@@ -43,6 +43,5 @@ function discountPrices(prices, discount) {
 
     return discounted;
 }
-
 
 module.exports = {sumValues, discountPrices};
